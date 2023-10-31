@@ -1,0 +1,5 @@
+package org.jsp.jdbc.demo5.fetch1;
+
+public class FetchSingleValue {
+
+}

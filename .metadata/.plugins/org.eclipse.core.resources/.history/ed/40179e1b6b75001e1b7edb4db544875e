@@ -1,0 +1,5 @@
+package jdbc.demo;
+
+public class LoadRegisterJDBCClass {
+
+}

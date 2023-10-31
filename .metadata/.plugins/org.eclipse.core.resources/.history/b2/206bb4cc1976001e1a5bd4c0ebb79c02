@@ -1,0 +1,9 @@
+package org.jspjdbc.demo1;
+
+public class LoanRegister {
+	public static void main(String[] args) throws Exception{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("Classes loaded and registered ");
+	}
+
+}

@@ -1,0 +1,31 @@
+package org.jsp.jdbc.demo3;
+
+import java.sql.DriverManager;
+import java.util.Scanner;
+
+
+public class UserInsertValues {
+	public static void main(String[] args) throws Exception{
+//		Scanner sc=new Scanner(System.in);
+//		System.out.println("Enter the id of emp : ");
+//		int emp_id=sc.nextInt();
+//		
+//		System.out.println("Enter the name of emp : ");
+//		String ename=sc.next();
+//		
+//		System.out.println("Enter the dob of emp : ");
+//		String dob=sc.next();
+//		
+//		System.out.println("Enter the mob number of emp : ");
+//		String mob=sc.next();
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("Classes is loaded and registered ");
+		
+		DriverManager.getConnection("jdbc:mysql://localhost:3306/alidb2", "root", "admin");
+		System.out.println("success fullly connected to the Database ");
+		
+		
+	}
+
+}

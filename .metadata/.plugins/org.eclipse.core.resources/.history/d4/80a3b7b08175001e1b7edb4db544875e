@@ -1,0 +1,38 @@
+package org.jsp.jdbc.demo;
+
+
+/*
+ * first way  
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import com.mysql.cj.jdbc.Driver;
+*/
+public class LoadRegisterJDBCClass {
+	
+  /* 
+   * first way 
+	public static void main(String[] args) {
+		try {
+			Driver d=new Driver();
+			
+			DriverManager.registerDriver(d);
+			System.out.println("Driver class loaded and registered ");
+		}
+		catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	*/
+	
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.jdbc.Driver");
+			System.out.println("Driver class loaded and registered ");
+		}
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

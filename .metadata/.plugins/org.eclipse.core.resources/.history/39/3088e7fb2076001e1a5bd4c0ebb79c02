@@ -1,0 +1,43 @@
+package org.jsp.jdbc.demo2.tester;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class InsertDataTable {
+	public static void main(String[] args) {
+		String name="ali3";
+		int id=55;
+		String dob="5-feb-2001";
+		String mob="9611301127";
+		try {
+			Driver d=new Driver();
+			DriverManager.registerDriver(d);
+			System.out.println("Succuessfully loaded and registered ");
+			
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/alidb1", "root", "admin");
+			System.out.println("successfully connected the alidb1 "); 
+			
+		
+			PreparedStatement ps=con.prepareStatement("insert into emp_db values('34' ,'ali3', '2-feb-2001','984587143')");	
+			ps=con.prepareStatement("insert into emp_db values('"+id+"' ,'"+name+"','"+dob+"','"+mob+"')");
+			int i=ps.executeUpdate();
+			if(i>0) {
+				System.out.println("successfully inserted the values ");
+			}
+			else {
+				System.out.println("fail to insert ");
+			}
+			
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

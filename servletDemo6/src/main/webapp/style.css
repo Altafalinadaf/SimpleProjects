@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+body{
+	color: red;
+}
+
+legend{
+	color: black;
+	size: 100px;
+}

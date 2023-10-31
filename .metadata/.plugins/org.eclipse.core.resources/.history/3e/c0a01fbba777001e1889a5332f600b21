@@ -1,0 +1,20 @@
+package org.jsp.servletDemo6;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class Demo6 extends HttpServlet {
+
+	@Override
+	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.service(arg0, arg1);
+		
+		String myname=arg0.getParameter("username");
+		String myemail=arg0.getParameter("email id");
+	}
+}

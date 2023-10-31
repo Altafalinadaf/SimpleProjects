@@ -1,0 +1,5 @@
+package org.jsp.servletDemo8Redirect;
+
+public class RedirectMethod {
+
+}

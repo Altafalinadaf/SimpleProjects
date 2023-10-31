@@ -1,0 +1,19 @@
+package jdbc.demo;
+
+import java.sql.SQLException;
+
+public class LoadRegisterJDBCClass {
+	public static void main(String[] args) {
+		try {
+			Driver d=new Driver();
+			
+			DriverManger.registerDriver(d);
+			System.out.println("Driver class loaded and registered ");
+		}
+		catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+
+}

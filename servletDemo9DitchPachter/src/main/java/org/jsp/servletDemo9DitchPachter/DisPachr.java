@@ -1,0 +1,43 @@
+package org.jsp.servletDemo9DitchPachter;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/login")
+public class DisPachr extends HttpServlet{
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String myemail=req.getParameter("email");
+		String mypass=req.getParameter("pass");
+		
+		PrintWriter out=resp.getWriter();
+//		out.print("email is : "+myemail+"\n\n");
+//		out.print("password : "+mypass+"\n\n");
+		
+	
+		
+		if(myemail.equals("altafalinadaf@gmail.com") &&mypass.equals("1234")) {
+			req.setAttribute("name_key", "Altaf_Ali");
+			RequestDispatcher rd=req.getRequestDispatcher("/profile.jsp");
+			rd.forward(req, resp);
+			
+		}
+		else {
+			resp.setContentType("text/html");
+			out.print("<h3 style='color:red'>Incorrect Password\n</h3>");
+			RequestDispatcher rd=req.getRequestDispatcher("/index.html");
+//			rd.forward(req, resp); // this will not print the "out.print("Incorrect Password\n");" stmnt we need another one method
+			rd.include(req, resp); // this method is as above 
+
+		}
+		
+	}
+}

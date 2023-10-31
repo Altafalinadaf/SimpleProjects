@@ -1,0 +1,5 @@
+package org.jsp.jdbc.demo2.tester;
+
+public class InsertDataTable {
+
+}

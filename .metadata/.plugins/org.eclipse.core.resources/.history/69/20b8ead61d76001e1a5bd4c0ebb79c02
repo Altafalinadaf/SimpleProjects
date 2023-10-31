@@ -1,0 +1,19 @@
+package org.jsp.jdbc.demo2.tester;
+
+import java.sql.DriverManager;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class InsertDataTable {
+	public static void main(String[] args) {
+		try {
+			Driver d=new Driver();
+			DriverManager.registerDriver(d);
+			System.out.println("Succuessfully loaded and registered ");
+		}
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

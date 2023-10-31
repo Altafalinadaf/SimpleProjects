@@ -1,0 +1,10 @@
+package org.jsp.jdbc.demo4.update;
+
+public class UpdateDemo {
+	public static void main(String[] args) throws Exception{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		//Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("Class is successfully loaded and registered ");
+	}
+
+}

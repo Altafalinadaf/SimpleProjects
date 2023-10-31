@@ -1,0 +1,17 @@
+package jdbc.demo;
+
+public class LoadRegisterJDBCClass {
+	public static void main(String[] args) {
+		try {
+			Driver d=new Driver();
+			
+			DriverManger.registerDriver(d);
+			System.out.println("Driver class loaded and registered ");
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+
+}

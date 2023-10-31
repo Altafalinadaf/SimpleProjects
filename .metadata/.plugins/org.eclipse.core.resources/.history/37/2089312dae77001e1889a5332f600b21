@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+
+	<form action="myForm" method="post">
+		<field set>
+			<legend> signup page </legend>
+			<label for="user name">Name</label>
+			<input type="text" name="name" id="user name" /> <br /> <br />
+			<label for="email id">Email</label>
+			<input type="text" name="email" id="email id" /> <br /> <br />
+
+			<input type="button" value="Submit" />
+			<input type="button" value="cancel" />
+
+		</field set>
+
+	</form>
+
+
+</body>
+
+</html>

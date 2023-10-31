@@ -1,0 +1,5 @@
+package org.jsp.jdbc.demo4.delete;
+
+public class DeleteDemo {
+
+}

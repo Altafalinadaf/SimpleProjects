@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="mylogin" method="post">
+	<fieldset>
+		<input type="text" name="Search" placeholder="search here"/>
+		<input type="submit" value="submit"/>
+	</fieldset>
+</form>
+</body>
+</html>

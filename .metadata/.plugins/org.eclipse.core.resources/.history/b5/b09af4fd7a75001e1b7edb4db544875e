@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module jdbc.demo {
+	requires java.sql;
+}

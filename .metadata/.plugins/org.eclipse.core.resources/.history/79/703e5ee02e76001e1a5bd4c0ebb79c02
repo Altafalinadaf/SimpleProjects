@@ -1,0 +1,20 @@
+package org.jsp.jdbc.demo4.update;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class UpdateDemo {
+	public static void main(String[] args) throws Exception{
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("Class is successfully loaded and registered ");
+		
+		Connection con= DriverManager.getConnection("jdbc:mysql://localhost/alibd1", "root", "admin");
+		System.out.println("Succefully connected to the data base ");
+		
+		PreparedStatement ps=con.prepareCall("update emp_db set ename=? where emp_id=?");
+		System.out.println("ready to update ");
+	}
+
+}
